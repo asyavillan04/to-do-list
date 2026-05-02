@@ -10,16 +10,16 @@
 
 Стек: HTML, CSS, JS
 
-- Функционал:
+# Функционал:
 
--Добавление новой задачи
--Поиск по текущим задачам в реальном времени
--Отметка задачи как выполненной
--Удаление выбранной задачи
--Удаление всех задач
--Счётчик количества задач
--Сохранение всех данных в локальное хранилище
--Поддержка клавиши ввод и автофокуса
+- Добавление новой задачи
+- Поиск по текущим задачам в реальном времени
+- Отметказадачи как выполненной
+- Удаление выбранной задачи
+- Удаление всех задач
+- Счётчик количества задач
+- Сохранение всех данных в локальное хранилище
+- Поддержка клавиши ввод и автофокуса
 
 Использовался урок с канала Александр Ламков - Friendly Frontend
 
@@ -29,16 +29,16 @@
 
 Stack: HTML, CSS, JavaScript
 
-- Features:
+# Features:
 
--Add a new task
--Real-time search through current tasks
--Mark a task as completed
--Delete a selected task
--Delete all tasks
--Task counter
--Save all data to local storage
--Enter key support and autofocus
+- Add a new task
+- Real-time search through current tasks
+- Mark a task as completed
+- Delete a selected task
+- Delete all tasks
+- Task counter
+- Save all data to local storage
+- Enter key support and autofocus
 
 Based on a tutorial by Alexander Lamkov — Friendly Frontend
 
@@ -48,13 +48,15 @@ Based on a tutorial by Alexander Lamkov — Friendly Frontend
 
 Tecnologías: HTML, CSS, JavaScript
 
-- Funcionalidades:
+# Funcionalidades:
 
--Agregar una nueva tarea
--Búsqueda en tiempo real entre las tareas actuales
--Marcar una tarea como completada
--Eliminar una tarea seleccionada
--Eliminar todas las tareas
--Contador de tareas
--Guardar todos los datos en el almacenamiento local
--Soporte para la tecla Enter y autofoco
+- Agregar una nueva tarea
+- Búsqueda en tiempo real entre las tareas actuales
+- Marcar una tarea como completada
+- Eliminar una tarea seleccionada
+- Eliminar todas las tareas
+- Contador de tareas
+- Guardar todos los datos en el almacenamiento local
+- Soporte para la tecla Enter y autofoco
+
+Basado en un tutorial de Alexander Lamkov — Friendly Frontend
