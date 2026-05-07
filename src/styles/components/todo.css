@@ -48,13 +48,13 @@
     border: none;
 
     &:hover {
-        color: var(--color-gray-4);
-    };
+        color: var(--color-4);
+    }
 
     &:not(.is-visible) {
         opacity: 0;
         visibility: hidden;
-    };
+    }
 };
 
 .todo_list,
@@ -73,7 +73,7 @@
 
 .todo_empty-message {
     text-align: center;
-    color: var(--color-gray-4);
+    color: var(--color-4);
 }
 
 

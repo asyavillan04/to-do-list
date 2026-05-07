@@ -1,3 +1,16 @@
+.todo-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+}
+
+.settings-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .settings-dropdown__trigger {
     flex-shrink: 0;
     display: inline-flex;
@@ -17,4 +30,57 @@
         color: var(--color-block);
         background-color: var(--color-4);
     }
+}
+
+
+/* Выпадающее меню (скрыто) */
+.settings-dropdown__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: var(--color-3);
+    border: 1px solid var(--color-contrast-1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    z-index: 20;
+
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+
+.set-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  border-radius: var(--border-radius);
+  width: 70px;
+  height: 70px;
+
+  &:hover {
+    background-color: var(--color-4);
+  }
+}
+
+[data-dropdown="lang"] .settings-dropdown__menu {
+    left: 0;
+    right: auto;
+}
+
+[data-dropdown="theme"] .settings-dropdown__menu {
+    right: 0;
+    left: auto;
+}
+
+.settings-dropdown__menu:not([hidden]) {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
 }

@@ -16,7 +16,7 @@ class Todo {
     }
 
     stateClasses = {
-        isVisible: 'isVisible',
+        isVisible: 'is-visible',
         isDisappearing: 'is-disappearing'
     }
 
@@ -227,3 +227,7 @@ class Todo {
 }
 
 new Todo()
+
+document.querySelectorAll('[data-dropdown]').forEach(dropdownEl => {
+  new Dropdown(dropdownEl);
+});
