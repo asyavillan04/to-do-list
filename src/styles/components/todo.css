@@ -6,9 +6,16 @@
     max-width: 404px;
     min-height: 429px;
     padding: 24px;
-    background-color: var(--color-white);
+    background-color: var(--color-block);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+}
+
+.todo_head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .todo_title {

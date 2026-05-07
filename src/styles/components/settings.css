@@ -1,0 +1,20 @@
+.settings-dropdown__trigger {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+
+    margin-left: auto;
+    padding: 5;
+    color: var(--color-4);
+    background-color: transparent;
+    border: none;
+    border-radius: var(--border-radius);
+
+    &:hover {
+        color: var(--color-block);
+        background-color: var(--color-4);
+    }
+}

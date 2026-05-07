@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     padding: 100px 30px;
     font-family: 'Inter', sans-serif;
-    background-color: var(--color-gray-1);
+    background-color: var(--color-1);
 }
 
 input, 
@@ -15,7 +15,7 @@ button {
 }
 
 :focus-visible {
-    outline: 2px dashed var(--color-black);
+    outline: 2px dashed var(--color-contrast);
     outline-offset: 4px;
     transition-duration: 0s !important;
 }

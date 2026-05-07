@@ -3,12 +3,12 @@
     align-items: center;
     height: var(--input-height);
     padding: 12px;
-    color: var(--color-gray-1);
-    background-color: var(--color-dark-2);
+    color: var(--color-1);
+    background-color: var(--color-contrast-2);
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-dark-2);
+    border: 1px solid var(--color-contrast-2);
     &:hover {
-        color: var(--color-dark-2);
+        color: var(--color-contrast-2);
         background-color: transparent;
     }
 

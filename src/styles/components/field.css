@@ -4,7 +4,7 @@
     &:has(.field_input:not(:placeholder-shown)) .field_label {
         scale: 0.7;
         translate: -1.75em -2.6em;
-        color: var(--color-black);
+        color: var(--color-contrast);
     }
 }
 
@@ -12,7 +12,7 @@
     position: absolute;
     top: 50%;
     left: 17px;
-    color: var(--color-gray-3);
+    color: var(--color-3);
     translate: 0 -50%;
 }
 
@@ -29,11 +29,11 @@
 
     &:hover,
     &:focus {
-        color: var(--color-dark-2);
+        color: var(--color-contrast-2);
     }
 
     &:focus {
-        background-color: var(--color-gray-1);
+        background-color: var(--color-1);
         outline: none;
     }
 
