@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="./styles/index.css"/>
 
-    <script src="dropdown.js"></script>
     <script src="script.js" type="module"></script>
 </head>
 <body>
@@ -27,25 +26,25 @@
                 </button>
 
                 <ul class="settings-dropdown__menu" hidden>
-                    <li><button class="set-option" data-lang="en">
+                    <button class="option" data-lang="en">
                         English
                         <img src="icons/usa-flag.svg" alt="English" width="50" height="30">
-                    </button></li>
+                    </button>
 
-                    <li><button class="set-option" data-lang="ru">
+                    <button class="option" data-lang="ru">
                         Русский
                         <img src="icons/ru-flag.svg" alt="Русский" width="50" height="30">
-                    </button></li>
+                    </button>
 
-                    <li><button class="set-option" data-lang="es">
+                    <button class="option" data-lang="es">
                         Español
                         <img src="icons/esp-flag.svg" alt="Español" width="50" height="30">
-                    </button></li>
+                    </button>
                 </ul>
             </div>
 
 
-            <h1 class="todo_title">To Do List</h1>
+            <h1 class="todo_title" data-locale="title">To Do List</h1>
 
             <div class="settings-dropdown" data-dropdown="theme">
                 <button class="settings-dropdown__trigger" 
@@ -65,20 +64,20 @@
                 </button>
 
                 <ul class="settings-dropdown__menu" hidden>
-                    <li><button class="set-option" data-theme="auto">
+                    <button class="option" data-theme="auto">
                         Auto
                         <img src="icons/theme-auto.svg" alt="" width="30px" height="30px">
-                    </button></li>
+                    </button>
 
-                    <li><button class="set-option" data-theme="light">
+                    <button class="option" data-theme="light">
                         Day
                         <img src="icons/theme-day.svg" alt="Day" width="30px" height="30px">
                     
-                    </button></li>
-                    <li><button class="set-option" data-theme="dark">
+                    </button>
+                    <button class="option" data-theme="dark">
                         Night
                         <img src="icons/theme-night.svg" alt="Night" width="30px" height="30px">
-                    </button></li>
+                    </button>
                 </ul>  
 
             </div>          
@@ -88,7 +87,7 @@
 
     <form class="todo_form" data-js-todo-new-task-form>
         <div class="todo_field field">
-            <label 
+            <label data-locale="newTaskLabel"
             for="new-task" 
                 class="field_label">
                 New task title
@@ -102,12 +101,12 @@
             />
 
             </div>
-            <button class="button" type="submit">Add</button>
+            <button class="button" data-locale="addButton" type="submit">Add</button>
         </form>
 
         <form class="todo_form" data-js-todo-search-task-form=>
             <div class="todo_field field">
-                <label 
+                <label data-locale="searchLabel"
                 for="search-task" 
                 class="field_label">
                 Search task
@@ -125,11 +124,12 @@
         </form>
 
         <div class="todo_info">
-            <div class="todo_total-tasks">
+            <div class="todo_total-tasks" data-locale="totalTasks">
                 Total tasks: <span data-js-todo-total-tasks>0</span>
             </div>
             <button class="todo_delete-all-button"
             type="button"
+            data-locale="deleteAll"
             data-js-todo-delete-all-button
             >
             Delete All
@@ -139,7 +139,7 @@
         <ul class="todo_list" data-js-todo-list>
 
         </ul>
-        <div class="todo_empty-message" data-js-todo-empty-message>
+        <div class="todo_empty-message" data-locale="emptyList" data-js-todo-empty-message>
         </div>
     </div>
 </body>

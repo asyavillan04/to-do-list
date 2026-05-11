@@ -1,3 +1,5 @@
+import { settings } from './settings/settings.js';
+
 class Todo {
     selectors ={
         root: `[data-js-todo]`,
@@ -22,13 +24,17 @@ class Todo {
 
     localStorageKey = 'todo-items'
 
-    constructor() {
+    constructor(settings) {
+        this.settings = settings;
+
         this.rootElement = document.querySelector(this.selectors.root)
         this.newTaskFormElement = this.rootElement.querySelector(this.selectors.newTaskForm)
         this.newTaskInputElement = this.rootElement.querySelector(this.selectors.newTaskInput)
         this.searchTaskFormElement = this.rootElement.querySelector(this.selectors.searchTaskForm)
         this.searchTaskInputElement = this.rootElement.querySelector(this.selectors.searchTaskInput)
         this.totalTasksElement = this.rootElement.querySelector(this.selectors.totalTasks)
+        console.log('totalTasksElement:', this.totalTasksElement);
+        
         this.deleteAllButtonElement = this.rootElement.querySelector(this.selectors.deleteAllButton)
         this.listElement = this.rootElement.querySelector(this.selectors.list)
         this.emptyMessageElement = this.rootElement.querySelector(this.selectors.emptyMessage)
@@ -65,52 +71,45 @@ class Todo {
         )
     }
 
-    render() {
-        this.totalTasksElement.textContent = this.state.items.length
+ render() {
 
+    if (this.totalTasksElement) {
+        this.totalTasksElement.textContent = this.settings.t('totalTasks', this.state.items.length);
+    }
+
+    if (this.deleteAllButtonElement) {
+        this.deleteAllButtonElement.textContent = this.settings.t('deleteAll');
         this.deleteAllButtonElement.classList.toggle(
             this.stateClasses.isVisible,
             this.state.items.length > 0
-        )
-
-        const items = this.state.filteredItems ?? this.state.items
-
-        this.listElement.innerHTML = items.map(({id, title, isChecked}) => `            <li class="todo_item todo-item" data-js-todo-item>
-                <input
-                class="todo-item_checkbox"
-                id="${id}"
-                type="checkbox"
-                ${isChecked ? 'checked' : ''}
-                data-js-todo-item-checkbox
-                />
-                <label 
-                    class="todo-item_label" 
-                    for="${id}" 
-                    data-js-todo-item-label
-                    >
-                    ${title}
-                </label>
-                <button 
-                class="todo-item_delete-button" 
-                type="button"
-                aria-label="Delete"
-                title="Delete"
-                data-js-todo-item-delete-button
-                >
-
-               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M15 5L5 15M5 5L15 15" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-               </svg>
-
-
-                </button>
-            </li>`).join('')
-
-            const isEmptyFilteredItems = this.state.filteredItems?.length === 0
-            const isEmptyItems = this.state.items.length === 0
-
-            this.emptyMessageElement.textContent = isEmptyFilteredItems ? 'tasks not found' : isEmptyItems ? 'there are no tasks yet' : ''
+        );
     }
+
+    const items = this.state.filteredItems ?? this.state.items;
+
+    if (this.listElement) {
+        this.listElement.innerHTML = items.map(({id, title, isChecked}) => `
+            <li class="todo_item todo-item" data-js-todo-item>
+                <input class="todo-item_checkbox" id="${id}" type="checkbox" ${isChecked ? 'checked' : ''} data-js-todo-item-checkbox />
+                <label class="todo-item_label" for="${id}" data-js-todo-item-label>${title}</label>
+                <button class="todo-item_delete-button" type="button" aria-label="Delete" title="Delete" data-js-todo-item-delete-button>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </li>`).join('');
+    }
+
+    if (this.emptyMessageElement) {
+        const isEmptyFilteredItems = this.state.filteredItems?.length === 0;
+        const isEmptyItems = this.state.items.length === 0;
+        this.emptyMessageElement.textContent = isEmptyFilteredItems
+            ? this.settings.t('notFound')
+            : isEmptyItems
+                ? this.settings.t('emptyList')
+                : '';
+    }
+}
     
     addItem(title) {
         this.state.items.push({
@@ -226,8 +225,5 @@ class Todo {
     }
 }
 
-new Todo()
 
-document.querySelectorAll('[data-dropdown]').forEach(dropdownEl => {
-  new Dropdown(dropdownEl);
-});
+new Todo(settings)

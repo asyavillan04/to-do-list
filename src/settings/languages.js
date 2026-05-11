@@ -6,8 +6,8 @@ export const languages = {
     searchLabel: 'Search task',
     totalTasks: (n) => `Total tasks: ${n}`,
     deleteAll: 'Delete All',
-    emptyList: 'there are no tasks yet',
-    notFound: 'tasks not found',
+    emptyList: 'There are no tasks yet',
+    notFound: 'Tasks not found',
     deleteConfirm: 'Are you sure you want to delete all?',
    
   },
@@ -18,7 +18,7 @@ export const languages = {
     searchLabel: 'Поиск задачи',
     totalTasks: (n) => `Всего задач: ${n}`,
     deleteAll: 'Удалить всё',
-    emptyList: 'пока задач нет',
+    emptyList: 'Пока задач нет',
     notFound: 'задачи не найдены',
     deleteConfirm: 'Вы уверены, что хотите удалить все задачи?',
   },
@@ -29,8 +29,8 @@ export const languages = {
     searchLabel: 'Buscar tarea',
     totalTasks: (n) => `Total de tareas: ${n}`,
     deleteAll: 'Eliminar todo',
-    emptyList: 'aún no hay tareas',
-    notFound: 'tareas no encontradas',
+    emptyList: 'Aún no hay tareas',
+    notFound: 'Tareas no encontradas',
     deleteConfirm: '¿Estás seguro de que quieres eliminar todas las tareas?',
   }
 };
