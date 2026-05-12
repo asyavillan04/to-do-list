@@ -76,8 +76,20 @@ applyTheme() {
 
 t(key, ...args) {
   const pack = languages[this.lang] || languages.en;
-  const value = pack[key];
-  return typeof value === 'function' ? value(...args) : value;
+  console.group(`t("${key}")`);
+  console.log('текущий язык:', this.lang);
+  console.log('весь объект языка:', pack);
+  console.log('ключ в объекте:', key, '→ значение:', pack?.[key]);
+  console.groupEnd();
+
+  const value = pack?.[key];
+  if (typeof value === 'function') {
+    return value(...args);
+  }
+  if (value === undefined) {
+    console.warn(`Перевод для ключа "${key}" не найден в языке "${this.lang}"`);
+  }
+  return value;
 }
 }
 

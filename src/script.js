@@ -28,13 +28,18 @@ class Todo {
         this.settings = settings;
 
         this.rootElement = document.querySelector(this.selectors.root)
+        console.log('rootElement:', this.rootElement);
+        
         this.newTaskFormElement = this.rootElement.querySelector(this.selectors.newTaskForm)
         this.newTaskInputElement = this.rootElement.querySelector(this.selectors.newTaskInput)
         this.searchTaskFormElement = this.rootElement.querySelector(this.selectors.searchTaskForm)
         this.searchTaskInputElement = this.rootElement.querySelector(this.selectors.searchTaskInput)
         this.totalTasksElement = this.rootElement.querySelector(this.selectors.totalTasks)
+
         console.log('totalTasksElement:', this.totalTasksElement);
         
+        
+
         this.deleteAllButtonElement = this.rootElement.querySelector(this.selectors.deleteAllButton)
         this.listElement = this.rootElement.querySelector(this.selectors.list)
         this.emptyMessageElement = this.rootElement.querySelector(this.selectors.emptyMessage)

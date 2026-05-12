@@ -23,6 +23,11 @@
 
 На основе урока с канала Александр Ламков - Friendly Frontend
 
+# Дополнено:
+
+- Изменение языка
+- Изменеение темы
+
 ## English
 
 # Study project - To-Do List
@@ -40,7 +45,13 @@ Stack: HTML, CSS, JavaScript
 - Save all data to local storage
 - Enter key support and autofocus
 
-Based on a tutorial by Alexander Lamkov — Friendly Frontend
+Based on a tutorial by Alexander Lamkov — Friendly Frontend 
+
+# Added
+
+- Language switching
+
+- Theme switching
 
 ## Español
 
@@ -60,3 +71,8 @@ Tecnologías: HTML, CSS, JavaScript
 - Soporte para la tecla Enter y autofoco
 
 Basado en un tutorial de Alexander Lamkov — Friendly Frontend
+
+# Añadido
+- Cambio de idioma
+
+- Cambio de tema
