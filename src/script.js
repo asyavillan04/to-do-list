@@ -26,7 +26,7 @@ class Todo {
 
     constructor(settings) {
         this.settings = settings;
-
+        
         this.rootElement = document.querySelector(this.selectors.root)
         console.log('rootElement:', this.rootElement);
         
@@ -48,6 +48,9 @@ class Todo {
             filteredItems: null,
             searchQuery: '',
         }
+
+        this.settings.onLanguageChange(() => this.render());
+
         this.render()
         this.bindEvents()
     }
@@ -129,6 +132,11 @@ class Todo {
     deleteItem(id) {
         this.state.items = this.state.items.filter((item) => item.id !== id)
         this.saveItemsToLocalStorage()
+        
+        if (this.state.searchQuery) {
+            this.filter()   
+        }
+
         this.render()
     }
 
@@ -145,6 +153,11 @@ class Todo {
 
         })
         this.saveItemsToLocalStorage()
+
+        if (this.state.searchQuery) {
+        this.filter()
+        }
+
         this.render()
     }
 

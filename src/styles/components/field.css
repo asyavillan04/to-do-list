@@ -1,6 +1,6 @@
 .field {
     position: relative;
-
+    
     &:has(.field_input:not(:placeholder-shown)) .field_label {
         scale: 0.7;
         translate: -1.75em -2.6em;
@@ -27,6 +27,8 @@
     border: var(--border);
     border-radius: var(--border-radius);
 
+    color: var(--color-contrast);
+    
     &:hover,
     &:focus {
         color: var(--color-contrast-2);

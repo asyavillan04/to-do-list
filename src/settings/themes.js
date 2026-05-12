@@ -13,16 +13,16 @@ export const themes = {
 
   },
   dark: {
-    '--color-block': '#151f1f',
-    '--color-contrast': '#92acaf',
+    '--color-block': '#101115',
+    '--color-contrast': '#76799b',
 
-    '--color-contrast-1': '#8fa5a9',
-    '--color-contrast-2': '#8ab1c5',
+    '--color-contrast-1': '#596f9a',
+    '--color-contrast-2': '#7481ac',
 
-    '--color-1': '#334148',
-    '--color-2': '#4a6f73',
-    '--color-3': '#8aaebd',
-    '--color-4': '#758891',
+    '--color-1': '#131a24',
+    '--color-2': '#4e628e',
+    '--color-3': '#7388ac',
+    '--color-4': '#4f5172',
   },
  
 };

@@ -9,6 +9,7 @@ export const languages = {
     emptyList: 'There are no tasks yet',
     notFound: 'Tasks not found',
     deleteConfirm: 'Are you sure you want to delete all?',
+    currentLang: 'EN',
    
   },
   ru: {
@@ -21,6 +22,7 @@ export const languages = {
     emptyList: 'Пока задач нет',
     notFound: 'задачи не найдены',
     deleteConfirm: 'Вы уверены, что хотите удалить все задачи?',
+    currentLang: 'RU',
   },
   es: {
     title: 'Lista de tareas',
@@ -32,5 +34,6 @@ export const languages = {
     emptyList: 'Aún no hay tareas',
     notFound: 'Tareas no encontradas',
     deleteConfirm: '¿Estás seguro de que quieres eliminar todas las tareas?',
+    currentLang: 'ESP',
   }
 };

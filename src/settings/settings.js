@@ -16,6 +16,8 @@ class Settings {
     this.applyLanguage();
     this.applyTheme();
 
+    this.onLanguageChangeCallbacks = [];
+
     console.log('Settings constructor finished');
   }
 
@@ -31,10 +33,16 @@ class Settings {
     }
   }
 
+  onLanguageChange(callback) {
+    this.onLanguageChangeCallbacks.push(callback);
+}
+
   setLang(lang) {
     this.lang = lang;
     localStorage.setItem('app-lang', lang);
     this.applyLanguage();
+
+    this.onLanguageChangeCallbacks.forEach(cb => cb());
   }
 
   setTheme(theme) {
@@ -74,23 +82,12 @@ applyTheme() {
     console.log('Тема установлена:', this.theme, '-> переменные:', themeVars);
 }
 
-t(key, ...args) {
-  const pack = languages[this.lang] || languages.en;
-  console.group(`t("${key}")`);
-  console.log('текущий язык:', this.lang);
-  console.log('весь объект языка:', pack);
-  console.log('ключ в объекте:', key, '→ значение:', pack?.[key]);
-  console.groupEnd();
-
-  const value = pack?.[key];
-  if (typeof value === 'function') {
-    return value(...args);
-  }
-  if (value === undefined) {
-    console.warn(`Перевод для ключа "${key}" не найден в языке "${this.lang}"`);
-  }
-  return value;
+  t(key, ...args) {
+    const pack = languages[this.lang] || languages.en;
+    const value = pack?.[key];
+    return typeof value === 'function' ? value(...args) : value;
 }
+
 }
 
 
