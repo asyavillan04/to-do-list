@@ -10,6 +10,8 @@
 
 Стек: HTML, CSS, JS
 
+[Доступно на git pages](https://asyavillan04.github.io/to-do-list/)
+
 # Функционал:
 
 - Добавление новой задачи
@@ -33,6 +35,8 @@
 # Study project - To-Do List
 
 Stack: HTML, CSS, JavaScript
+
+[Available on git pages](https://asyavillan04.github.io/to-do-list/)
 
 # Features:
 
@@ -58,6 +62,8 @@ Based on a tutorial by Alexander Lamkov — Friendly Frontend
 # Proyecto de aprendizaje - Lista de Tareas
 
 Tecnologías: HTML, CSS, JavaScript
+
+[Disponsibe en git pages](https://asyavillan04.github.io/to-do-list/)
 
 # Funcionalidades:
 
